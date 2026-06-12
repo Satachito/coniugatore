@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>イタリア語動詞活用表 | Coniugazione dei verbi</title>
+<meta name="description" content="日本人学習者のためのイタリア語動詞活用表。直説法・接続法・条件法・命令法を日本語の解説つきで確認できます。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>イタリア語動詞活用表<span class="sub">Coniugazione</span></h1>
+  <input id="search" type="search" placeholder="動詞を検索 (例: parlare / 話す)" autocomplete="off">
+  <button id="quiz-open">✏️ 練習モード</button>
+</header>
+
+<div class="layout">
+  <aside id="sidebar">
+    <nav id="verb-list"></nav>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<footer>
+  赤字 = 規則活用と異なる形 ・ essere 支配の近過去は過去分詞が主語に性数一致します (andato/-a/-i/-e)
+</footer>
+
+<div id="quiz" hidden>
+  <div class="quiz-box">
+    <button id="quiz-close" aria-label="閉じる">×</button>
+    <h2>✏️ 活用練習</h2>
+    <div class="q-prompt">
+      <div><span id="q-verb"></span><span id="q-ja"></span></div>
+      <div class="q-cond">
+        <span class="tag" id="q-tense"></span>
+        <span id="q-pron"></span>
+      </div>
+    </div>
+    <input id="q-input" type="text" placeholder="活用形を入力" autocomplete="off"
+           autocapitalize="off" autocorrect="off" spellcheck="false" lang="es">
+    <div class="accent-row">
+      <button class="accent-btn">à</button>
+      <button class="accent-btn">è</button>
+      <button class="accent-btn">é</button>
+      <button class="accent-btn">ì</button>
+      <button class="accent-btn">ò</button>
+      <button class="accent-btn">ù</button>
+    </div>
+    <div class="q-actions">
+      <button id="q-check">確認</button>
+      <button id="q-reveal">答えを見る</button>
+      <button id="q-next">次の問題 →</button>
+    </div>
+    <div id="q-feedback"></div>
+    <div id="q-score"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
